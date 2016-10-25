@@ -1,0 +1,12 @@
+Name: Tom Brady         Address: 15 Walbridge Street Apt. 3, Boston, MA 02134 
+Workphone: 231-564-2345         Cellphone: 231-564-1267 
+Contact Email: tom_brady@gmail.com        Contact Birthday: 08-03-1977       Contact Notes: A football player        
+
+Name: Sean Parker         Address: 14 Vallydale Drive Apt.A, San Francisco, CA 94101 
+Workphone: 345-967-4567         Cellphone: 321-678-5678 
+Contact Email: sean_parker@gmail.com        Contact Birthday: 12-3-1979       Contact Notes: An entreprenuer        
+
+Name: Lindsay Lohan         Address: 123 Peachtree Avenue, New York, New York 10001 
+Workphone: 214-567-3456         Cellphone: 214-567-8976 
+Contact Email: lindsay_lo@fangirl.com        Contact Birthday: 07-02-1986       Contact Notes: A special girl        
+
