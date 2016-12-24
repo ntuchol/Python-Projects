@@ -27,7 +27,7 @@ def match_ends(words):
     if len(word) >= 2 and word[0] == word[-1]:
       count = count + 1
   return count
-
+print(match_ends(words))
 
 # B. front_x
 # Given a list of strings, return a list with the strings
@@ -68,6 +68,7 @@ def test(got, expected):
     prefix = '  X '
   print('%s got: %s expected: %s' % (prefix, repr(got), repr(expected)))
 
+
 # Calls the above functions with interesting inputs.
 def main():
   print('match_ends')
@@ -97,5 +98,3 @@ def main():
 
 if __name__ == '__main__':
   main()
-
-
