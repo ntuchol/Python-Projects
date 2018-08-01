@@ -1,0 +1,19 @@
+import random
+times_guessed = 0;
+num = random.randint(1,10)
+
+print("I'm thinking of a between 1 and 10, guess it.")
+
+while times_guessed <= 5: 
+  yourGuess = int(input("What is your guess?"))
+
+  if yourGuess == num: 
+    print("Great Job!")
+    times_guessed = 0;
+    num = random.randint(1,10)
+  else: 
+    print("Try Again.")
+    times_guessed = times_guessed + 1;
+
+
+
