@@ -1,0 +1,35 @@
+from random import randint 
+
+#create a list of play options 
+t = ["Rock", "Paper", "Scissors"]
+
+ai = t[randint(0,2)];
+
+player = False
+
+while player == False:
+    player = input("Please select one of the following: Rock, Paper, or Scissors?")
+    if player == ai:
+        print("Tie!")
+    elif player == "Rock":
+        if ai == "Paper":
+            print("You lose!", player, "covers", ai)
+        else:
+            print("You win!", player, "smashes", ai)
+    elif player == "Paper":
+        if ai == "Scissors":
+            print("You lose!", player, "cut", ai)
+        else:
+            print("You win!", player, "covers", ai)
+    elif player == "Scissors":
+        if player == "Rock":
+            print("You lose!", player, "smashes", ai)
+        else:
+            print("You win!", player, "cut", ai)
+    else:
+       print("That's not a valid play. Check your spelling!")
+
+player = False
+computer = t[randint(0,2)]
+
+
