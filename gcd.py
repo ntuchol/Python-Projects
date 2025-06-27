@@ -1,18 +1,19 @@
-import math
+def gcdExtended(a, b): 
+    # Base Case 
+    if a == 0 : 
+        return b,0,1
+            
+    gcd,x1,y1 = gcdExtended(b%a, a) 
+    
+    # Update x and y using results of recursive 
+    # call 
+    x = y1 - (b//a) * x1 
+    y = x1 
+    
+    return gcd,x,y 
+    
 
-# Calculate the GCD of two integers
-num1 = 54
-num2 = 24
-gcd_value = math.gcd(num1, num2)
-print(f"The GCD of {num1} and {num2} is: {gcd_value}")
-
-# Calculate the GCD of more than two integers
-num3 = 108
-num4 = 216
-gcd_value_multiple = math.gcd(num1, num3, num4)
-print(f"The GCD of {num1}, {num3}, and {num4} is: {gcd_value_multiple}")
-
-# GCD with zero
-num5 = 0
-gcd_with_zero = math.gcd(num1, num5)
-print(f"The GCD of {num1} and {num5} is: {gcd_with_zero}")
+# Driver code 
+a, b = 35,15
+g, x, y = gcdExtended(a, b) 
+print("gcd(", a , "," , b, ") = ", g)

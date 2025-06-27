@@ -21,3 +21,4 @@ def newton_sqrt(number, tolerance=1e-10, max_iterations=1000):
 number = 25
 result = newton_sqrt(number)
 print(f"The square root of {number} is approximately {result}")
+
