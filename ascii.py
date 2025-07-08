@@ -1,7 +1,7 @@
-character = input("Enter a character: ")
+character = 'A'
+ascii_value = ord(character)
+print(f"The ASCII value of '{character}' is {ascii_value}")
 
-if len(character) == 1:
-    ascii_value = ord(character)
-    print("The ASCII value of '" + character + "' is", ascii_value)
-else:
-    print("Please enter a single character.")
+character_lower = 'p'
+ascii_value_lower = ord(character_lower)
+print(f"The ASCII value of '{character_lower}' is {ascii_value_lower}")

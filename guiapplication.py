@@ -1,21 +1,15 @@
 import tkinter as tk
-root = tk.Tk()
 
-label = tk.Label(root, text="Hello, GUI!")
-button = tk.Button(root, text="Click Me")
-label.pack()
-button.pack()
-root.mainloop()
+def button_clicked():
+    label.config(text="Button Clicked!")
 
-import tkinter as tk
+window = tk.Tk()
+window.title("Button and Label GUI")
 
-root = tk.Tk()
-root.title("Simple GUI")
+label = tk.Label(window, text="Click the button below:")
+label.pack(pady=20)
 
-label = tk.Label(root, text="Hello, GUI!")
-button = tk.Button(root, text="Click Me", command=lambda: print("Button Clicked!"))
+button = tk.Button(window, text="Click Me", command=button_clicked)
+button.pack(pady=10)
 
-label.pack()
-button.pack()
-
-root.mainloop()
+window.mainloop()
