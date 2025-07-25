@@ -1,5 +1,5 @@
 numbers = [1, 2, 3, 4, 5]
-total = 0  # Initialize accumulator to 0 for sum
+total = 0  
 for number in numbers:
     total += number  
 print(total)  
