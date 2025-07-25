@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 from statsmodels.graphics.tsaplots import plot_pacf
-import pandas as pd # Assuming you have a pandas DataFrame with your time series data
+import pandas as pd
 
 
 milk_volume = pd.Series([12, 10, 15, 13, 16, 14, 18, 17, 20, 19, 22, 21]) 
