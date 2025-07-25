@@ -23,13 +23,10 @@ flag_width = 200
 flag_height = 150
 stripe_width = flag_width / 3
 
-# Draw green stripe
 draw_rectangle(-flag_width/2, flag_height/2, stripe_width, flag_height, "green")
 
-# Draw white stripe
 draw_rectangle(-flag_width/2 + stripe_width, flag_height/2, stripe_width, flag_height, "white")
 
-# Draw red stripe
 draw_rectangle(-flag_width/2 + 2 * stripe_width, flag_height/2, stripe_width, flag_height, "red")
 
 screen.mainloop()
