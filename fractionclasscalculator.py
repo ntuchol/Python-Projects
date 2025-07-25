@@ -12,7 +12,7 @@ class Fraction:
         common_divisor = gcd(self.numerator, self.denominator)
         self.numerator //= common_divisor
         self.denominator //= common_divisor
-        if self.denominator < 0:  # Keep denominator positive
+        if self.denominator < 0:  
             self.numerator *= -1
             self.denominator *= -1
 
