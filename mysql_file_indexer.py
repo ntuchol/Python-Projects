@@ -2,7 +2,6 @@ import mysql.connector
 import os
 from datetime import datetime
 
-# MySQL connection details
 DB_CONFIG = {
     "host": "localhost",
     "user": "your_user",
@@ -10,11 +9,9 @@ DB_CONFIG = {
     "database": "file_index_db",
 }
 
-# Directory to index
 TARGET_DIRECTORY = "/path/to/your/files"
 
 def create_table(cursor):
-    """Creates the file_metadata table if it doesn't exist."""
     try:
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS file_metadata (
@@ -31,7 +28,6 @@ def create_table(cursor):
         print(f"Error creating table: {err}")
 
 def index_files(directory_path):
-    """Scans the directory and indexes files in the database."""
     try:
         cnx = mysql.connector.connect(**DB_CONFIG)
         cursor = cnx.cursor()
