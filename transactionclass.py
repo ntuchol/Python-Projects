@@ -8,26 +8,23 @@ class Transaction:
         return f"Transaction(amount={self.amount})"
 
     def apply_discount(self, percentage):
-        """Apply a discount to the transaction amount."""
         if not (0 <= percentage <= 100):
             raise ValueError("Percentage must be between 0 and 100.")
         self.amount -= self.amount * (percentage / 100)
 
     def add_tax(self, percentage):
-        """Add tax to the transaction amount."""
         if not (0 <= percentage <= 100):
             raise ValueError("Percentage must be between 0 and 100.")
         self.amount += self.amount * (percentage / 100)
 
-# Example usage:
 try:
     transaction = Transaction(100)
-    print(transaction)  # Output: Transaction(amount=100)
+    print(transaction)  
 
-    transaction.apply_discount(10)  # Apply 10% discount
-    print(transaction)  # Output: Transaction(amount=90.0)
+    transaction.apply_discount(10)  
+    print(transaction) 
 
-    transaction.add_tax(5)  # Add 5% tax
-    print(transaction)  # Output: Transaction(amount=94.5)
+    transaction.add_tax(5)  
+    print(transaction)  
 except ValueError as e:
     print(f"Error: {e}")
