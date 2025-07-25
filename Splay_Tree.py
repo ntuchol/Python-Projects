@@ -1,31 +1,26 @@
 class Node: 
-    # constructor for Node class
     def __init__(self, key): 
         self.key = key
         self.left = None
         self.right = None
 
 def newNode(key):
-    # create a new node
     node = Node(key)
     return node
   
 def rightRotate(x): 
-    # rotate the tree to the right
     y = x.left
     x.left = y.right
     y.right = x
     return y
   
 def leftRotate(x):
-    # rotate the tree to the left
     y = x.right
     x.right = y.left
     y.left = x
     return y
   
 def splay(root, key):
-    # perform the splay operation
     if root is None or root.key == key: 
         return root
     if root.key > key: 
@@ -52,11 +47,9 @@ def splay(root, key):
         return (root.right is None) and root or leftRotate(root)
 
 def search(root, key):
-    # search for a key in the tree
     return splay(root, key) 
 
 def insert(root, key):
-    # insert a new key in the tree
     if root is None: 
         return newNode(key) 
     root = splay(root, key) 
@@ -76,7 +69,6 @@ def insert(root, key):
         return new_node 
 
 def delete(root, key): 
-    # delete a key from the tree
     if root is None: 
         return root 
     root = splay(root, key) 
@@ -90,7 +82,6 @@ def delete(root, key):
     return new_root 
 
 def preOrder(root):
-    # perform pre-order traversal of the tree
     if root: 
         print(root.key, end = ' ') 
         preOrder(root.left) 
