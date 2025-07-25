@@ -10,12 +10,10 @@ class C(A):
     def greet(self):
         print("Hello from C")
 
-class D(B, C):  # Diamond inheritance
+class D(B, C):  
     pass
 
-# Creating an instance of D
 d = D()
 d.greet()
 
-# Checking the MRO
 print(D.mro())
