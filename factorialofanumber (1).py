@@ -6,7 +6,6 @@ def factorial_iterative(n):
         result *= i
     return result
 
-# Input from user
 num = int(input("Enter a number: "))
 result = factorial_iterative(num)
 print(f"The factorial of {num} is {result}")
