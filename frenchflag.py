@@ -6,7 +6,6 @@ turtle = turtle.Turtle()
 turtle.speed(0)
 turtle.penup()
 
-# Blue stripe
 turtle.goto(-300, -200)
 turtle.pendown()
 turtle.fillcolor("blue")
@@ -19,7 +18,6 @@ for _ in range(2):
 turtle.end_fill()
 turtle.penup()
 
-# White stripe
 turtle.goto(-100, -200)
 turtle.pendown()
 turtle.fillcolor("white")
@@ -32,7 +30,6 @@ for _ in range(2):
 turtle.end_fill()
 turtle.penup()
 
-# Red stripe
 turtle.goto(100, -200)
 turtle.pendown()
 turtle.fillcolor("red")
