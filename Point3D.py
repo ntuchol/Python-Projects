@@ -8,13 +8,11 @@ class Point3D:
         return f"Point3D(x={self.x}, y={self.y}, z={self.z})"
 
     def distance_to(self, other):
-        """Calculate the Euclidean distance to another Point3D."""
         return ((self.x - other.x) ** 2 + 
                 (self.y - other.y) ** 2 + 
                 (self.z - other.z) ** 2) ** 0.5
 
     def translate(self, dx, dy, dz):
-        """Translate the point by given deltas."""
         self.x += dx
         self.y += dy
         self.z += dz
