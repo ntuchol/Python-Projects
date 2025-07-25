@@ -1,4 +1,3 @@
-# Iterative approach
 def factorial_iterative(n):
     if n < 0:
         return "Factorial is not defined for negative numbers"
@@ -10,7 +9,6 @@ def factorial_iterative(n):
             result *= i
         return result
 
-# Recursive approach
 def factorial_recursive(n):
     if n < 0:
         return "Factorial is not defined for negative numbers"
@@ -19,7 +17,6 @@ def factorial_recursive(n):
     else:
         return n * factorial_recursive(n - 1)
 
-# Example usage
 number = 5
 print(f"Factorial of {number} (iterative): {factorial_iterative(number)}")
 print(f"Factorial of {number} (recursive): {factorial_recursive(number)}")
