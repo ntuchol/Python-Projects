@@ -23,7 +23,6 @@ def remove_car(plate_number):
     else:
         print(f"No car found with plate number {plate_number}.")
 
-# Example Usage
 while True:
     print("\nCar Registration System")
     print("1. Add Car")
