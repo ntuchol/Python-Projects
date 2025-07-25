@@ -258,4 +258,4 @@ def measure_time(func, *args, num_runs=100):
 if __name__ == "__main__":
     input_sizes = [100, 1000, 10000]
     for size in input_sizes:
-        data = random.sample(range(size * 
+        data = random.sample(range(size * ))
