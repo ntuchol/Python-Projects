@@ -1,15 +1,7 @@
 import urllib.parse
 
 def url_parser(url):
-    """
-    Parses a URL and returns a dictionary of its components.
-
-    Args:
-        url (str): The URL to parse.
-
-    Returns:
-        dict: A dictionary containing the parsed URL components, or None if parsing fails.
-    """
+    
     try:
         parsed_url = urllib.parse.urlparse(url)
         return {
