@@ -8,7 +8,6 @@ def koch(a, order):
     else:
         forward(a)
 
-# Test
 koch(100, 0)
 pensize(3)
 koch(100, 1)
