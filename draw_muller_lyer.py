@@ -1,15 +1,9 @@
 import matplotlib.pyplot as plt
 
 def draw_muller_lyer(length, arrow_size):
-  """Draws the Müller-Lyer illusion.
-
-  Args:
-    length: The length of the lines.
-    arrow_size: The size of the arrows.
-  """
+  
   plt.figure(figsize=(8, 4))
 
-  # Line with outward-pointing arrows
   plt.subplot(1, 2, 1)
   plt.plot([0, length], [0, 0], 'k-')
   plt.plot([0, arrow_size], [0, arrow_size], 'k-')
@@ -21,7 +15,6 @@ def draw_muller_lyer(length, arrow_size):
   plt.xlim([-arrow_size, length + arrow_size])
   plt.ylim([-arrow_size * 2, arrow_size * 2])
 
-  # Line with inward-pointing arrows
   plt.subplot(1, 2, 2)
   plt.plot([0, length], [0, 0], 'k-')
   plt.plot([0, arrow_size], [arrow_size, 0], 'k-')
@@ -35,5 +28,4 @@ def draw_muller_lyer(length, arrow_size):
 
   plt.show()
 
-# Example usage:
 draw_muller_lyer(10, 1)
