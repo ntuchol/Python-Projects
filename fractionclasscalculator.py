@@ -41,7 +41,6 @@ class Fraction:
     def __str__(self):
         return f"{self.numerator}/{self.denominator}" if self.denominator != 1 else f"{self.numerator}"
 
-# Example Usage
 fraction1 = Fraction(1, 2)
 fraction2 = Fraction(3, 4)
 
