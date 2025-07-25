@@ -7,4 +7,3 @@ def invert_dictionary(original_dict):
 original_dict = {'a': 1, 'b': 2, 'c': 3}
 inverted_dict = invert_dictionary(original_dict)
 print(inverted_dict)
-# Expected output: {1: 'a', 2: 'b', 3: 'c'}
