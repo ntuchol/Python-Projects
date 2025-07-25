@@ -15,14 +15,13 @@ def find_broken_links(base_url):
             response = requests.get(url)
             if response.status_code >= 400:
                 broken_links.append((url, response.status_code))
-                return # No need to parse content if the page itself is broken
+                return 
 
             soup = BeautifulSoup(response.text, 'html.parser')
             for link in soup.find_all('a', href=True):
                 href = link['href']
                 absolute_url = urljoin(url, href)
                 
-                # Only check internal links to avoid external website checks
                 if urlparse(absolute_url).netloc == urlparse(base_url).netloc:
                     crawl_page(absolute_url)
 
@@ -32,7 +31,3 @@ def find_broken_links(base_url):
     crawl_page(base_url)
     return broken_links
 
-# Example usage
-# broken_links_found = find_broken_links("https://example.com")
-# for link, status in broken_links_found:
-#     print(f"Broken link: {link} (Status/Error: {status})")
