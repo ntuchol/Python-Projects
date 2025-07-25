@@ -1,7 +1,6 @@
 import re
 
 def read_phone_number():
-    # Regular expression for U.S. phone number format (XXX-XXX-XXXX)
     phone_pattern = re.compile(r'^\(\d{3}\) \d{3}-\d{4}$')
     
     while True:
@@ -12,5 +11,4 @@ def read_phone_number():
         else:
             print("Invalid format. Please try again.")
 
-# Run the program
 read_phone_number()
