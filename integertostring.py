@@ -1,15 +1,6 @@
 def int_to_base_string(number, base):
-    """
-    Converts an integer to a string representation in a specified base.
-
-    Args:
-        number (int): The integer to convert.
-        base (int): The target base (e.g., 2 for binary, 10 for decimal, 16 for hexadecimal).
-
-    Returns:
-        str: The string representation of the number in the given base.
-    """
-    if not (2 <= base <= 36):  # Common range for bases using digits and letters
+    
+    if not (2 <= base <= 36):  
         raise ValueError("Base must be between 2 and 36.")
 
     if number == 0:
@@ -26,9 +17,9 @@ def int_to_base_string(number, base):
     while number > 0:
         remainder = number % base
         result.append(digits[remainder])
-        number //= base  # Integer division
+        number //= base  
 
     if is_negative:
         result.append("-")
 
-    return "".join(result[::-1])  # Reverse the list and join to form the string
+    return "".join(result[::-1]) 
