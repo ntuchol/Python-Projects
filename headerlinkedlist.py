@@ -3,7 +3,6 @@ class Node:
         self.data = new_data
         self.next = None
 
-# Inserts a node into the linked list.
 def insert(header, x):
     curr = header
     while curr.next is not None:
@@ -21,8 +20,6 @@ def print_list(header):
 
 if __name__ == "__main__":
 
-    # Create a hard-coded header linked list:
-    # header -> 1 -> 2 -> 3 -> 4
     header = Node(0)
     insert(header, 1)
     insert(header, 2)
