@@ -3,7 +3,6 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
-# Configure logging
 logging.basicConfig(
     filename='app.log',
     level=logging.DEBUG,
@@ -11,7 +10,6 @@ logging.basicConfig(
     datefmt='%Y-%m-%d %H:%M:%S'
 )
 
-# Create a logger
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 
