@@ -1,6 +1,5 @@
 import xml.etree.ElementTree as ET
 
-# Create a sample XML file (or load an existing one)
 xml_data = """<?xml version="1.0" encoding="UTF-8"?>
 <library>
     <book category="fiction">
@@ -19,15 +18,9 @@ xml_data = """<?xml version="1.0" encoding="UTF-8"?>
         <year>1960</year>
     </book>
 </library>
-"""
-
-# Parse the XML data from the string
 root = ET.fromstring(xml_data)
 
-# Access the root element
 print(f"Root tag: {root.tag}")
-
-# Iterate through each book element
 print("\nLibrary Books:")
 for book in root.findall('book'):
     category = book.get('category')
@@ -41,7 +34,6 @@ for book in root.findall('book'):
     print(f"    Year: {year}")
     print("-" * 20)
 
-# Find a specific book by attribute
 print("\nSearching for a fiction book:")
 for book in root.findall('.//book[@category="fiction"]'):
     title = book.find('title').text
