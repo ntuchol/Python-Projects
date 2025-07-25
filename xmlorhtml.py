@@ -10,7 +10,6 @@ def read_xml(file_path):
     except Exception as e:
         print("Error reading XML file:", e)
 
-# Example usage
 read_xml("example.xml")
 
 from bs4 import BeautifulSoup
@@ -26,5 +25,4 @@ def read_html(file_path):
     except Exception as e:
         print("Error reading HTML file:", e)
 
-# Example usage
 read_html("example.html")
