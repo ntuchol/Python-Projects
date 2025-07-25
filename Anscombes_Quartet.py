@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
         height=4,
         scatter_kws={"s": 50, "alpha": 1} 
     )
-    plt.suptitle("Anscombe's Quartet", y=1.02) # Add a main title
+    plt.suptitle("Anscombe's Quartet", y=1.02) 
     plt.show()
 
 
