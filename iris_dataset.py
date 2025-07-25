@@ -12,7 +12,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_
 
 training_errors = []
 test_errors = []
-k_values = range(1, 21) # Test K from 1 to 20
+k_values = range(1, 21) 
 
 for k in k_values:
     knn = KNeighborsClassifier(n_neighbors=k)
