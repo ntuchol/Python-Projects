@@ -12,7 +12,7 @@ def monty_game(chances, switch_strategy=True):
         doors = [0, 0, 0]
         car_door = random.randint(0,2)
         doors[car_door] = 1
-        
+    
         first_choice = random.randint(0,2)
         
 
