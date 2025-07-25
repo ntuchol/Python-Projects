@@ -13,13 +13,10 @@ async def process_data():
     return "Processed data"
 
 async def main():
-    # Run tasks concurrently
     fetch_task = asyncio.create_task(fetch_data())
     process_task = asyncio.create_task(process_data())
 
-    # Wait for both tasks to complete
     results = await asyncio.gather(fetch_task, process_task)
     print("Results:", results)
 
-# Run the event loop
 asyncio.run(main())
