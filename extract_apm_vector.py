@@ -10,6 +10,5 @@ from transformers import BertTokenizer, BertModel
         with torch.no_grad():
             output = model(**encoded_input)
 
-        # The last hidden state often serves as the embedding
         log_vector = output.last_hidden_state.mean(dim=1).squeeze().numpy()
-        print(log_vector[:5]) # Print first 5 elements of the vector
+        print(log_vector[:5]) 
