@@ -17,6 +17,5 @@ def collect_ticker_symbols():
 
     return ticker_symbols
 
-# Call the function
 if __name__ == "__main__":
     collect_ticker_symbols()
