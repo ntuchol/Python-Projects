@@ -1,6 +1,6 @@
     temperatures = [25, 28, 21, 30, 26]
     max_temperature = max(temperatures)
-    print(max_temperature)  # Output: 30
+    print(max_temperature)  
     
  weather_data = [
         {'city': 'A', 'temperature': 25},
@@ -8,9 +8,7 @@
         {'city': 'C', 'temperature': 22}
     ]
     max_temp_city = max(weather_data, key=lambda x: x['temperature'])
-    print(max_temp_city)  # Output: {'city': 'B', 'temperature': 30}
-
-import pandas as pd
+    print(max_temp_city)  
 
     data = {'date': ['2024-05-01', '2024-05-02', '2024-05-03'],
             'temperature': [25, 28, 31]}
