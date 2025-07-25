@@ -7,15 +7,12 @@ class TextEditor:
         self.root.title("Python Text Editor")
         self.root.geometry("800x600")
 
-        # Text widget
         self.text_area = tk.Text(self.root, wrap="word", undo=True)
         self.text_area.pack(fill="both", expand=True)
 
-        # Menu bar
         self.menu_bar = tk.Menu(self.root)
         self.root.config(menu=self.menu_bar)
 
-        # File menu
         file_menu = tk.Menu(self.menu_bar, tearoff=0)
         file_menu.add_command(label="New", command=self.new_file)
         file_menu.add_command(label="Open", command=self.open_file)
@@ -25,7 +22,6 @@ class TextEditor:
         file_menu.add_command(label="Exit", command=self.root.quit)
         self.menu_bar.add_cascade(label="File", menu=file_menu)
 
-        # Edit menu
         edit_menu = tk.Menu(self.menu_bar, tearoff=0)
         edit_menu.add_command(label="Undo", command=self.text_area.edit_undo)
         edit_menu.add_command(label="Redo", command=self.text_area.edit_redo)
@@ -61,9 +57,9 @@ class TextEditor:
     def confirm_save(self):
         if self.text_area.edit_modified():
             response = messagebox.askyesnocancel("Save Changes", "Do you want to save changes?")
-            if response:  # Yes
+            if response:  
                 self.save_file()
-            return response is not None  # True if Yes or No, False if Cancel
+            return response is not None  
         return True
 
 if __name__ == "__main__":
