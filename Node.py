@@ -8,7 +8,6 @@ class LinkedList:
         self.head = None
 
     def traverse_iterative(self):
-        """Traverses the linked list iteratively and prints the data of each node."""
         current = self.head
         while current:
             print(current.data, end=" ")
@@ -16,7 +15,6 @@ class LinkedList:
         print()
 
     def traverse_recursive(self, node):
-         """Traverses the linked list recursively and prints the data of each node."""
          if node is None:
             return
          print(node.data, end=" ")
