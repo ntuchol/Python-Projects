@@ -1,16 +1,13 @@
 import random
 
 def roll_dice():
-    """Simulates rolling two dice."""
     die1 = random.randint(1, 6)
     die2 = random.randint(1, 6)
     return die1 + die2
 
 def play_craps():
-    """Plays a single round of Craps."""
     print("Welcome to Craps!")
     
-    # Come Out Roll
     come_out_roll = roll_dice()
     print(f"Come Out Roll: {come_out_roll}")
 
@@ -22,7 +19,6 @@ def play_craps():
         point = come_out_roll
         print(f"Point is: {point}")
         
-        # Point Phase
         while True:
             next_roll = roll_dice()
             print(f"Next Roll: {next_roll}")
@@ -33,6 +29,3 @@ def play_craps():
             elif next_roll == 7:
                 print("Seven Out! You Lose!")
                 break
-
-# To play the game:
-# play_craps()
