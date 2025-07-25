@@ -7,7 +7,6 @@ def record_event():
     daily_event_counts[today] = daily_event_counts.get(today, 0) + 1  
 
 def get_mean_daily_events(num_days):
-    # Calculate the average daily event count over the past 'num_days'
     recent_dates = sorted(daily_event_counts.keys(), reverse=True)[:num_days]
     total_events = sum(daily_event_counts[date] for date in recent_dates)  
     return total_events / len(recent_dates) if recent_dates else 0  
