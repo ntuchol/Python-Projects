@@ -22,7 +22,7 @@ class ATM:
             print(f"${amount:.2f} withdrawn successfully!")
 
 def atm_menu():
-    atm = ATM(balance=1000)  # Initial balance set to $1000
+    atm = ATM(balance=1000)  
     while True:
         print("\n--- ATM Menu ---")
         print("1. Check Balance")
@@ -51,6 +51,5 @@ def atm_menu():
         else:
             print("Invalid choice. Please select a valid option.")
 
-# Run the ATM program
 if __name__ == "__main__":
     atm_menu()
