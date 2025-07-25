@@ -1,7 +1,6 @@
 import re
 import random
 
-# Define a dictionary of patterns and responses
 responses = {
     r"(?i)i need (.*)": [
         "Why do you need {0}?",
@@ -53,7 +52,6 @@ responses = {
     ]
 }
 
-# Function to generate a response
 def eliza_response(user_input):
     for pattern, responses_list in responses.items():
         match = re.match(pattern, user_input)
@@ -62,7 +60,6 @@ def eliza_response(user_input):
             return response.format(*[g.strip() for g in match.groups()])
     return "I'm not sure I understand. Can you explain?"
 
-# Main loop for interaction
 if __name__ == "__main__":
     print("ELIZA: Hello! I'm here to help. Type 'quit' to exit.")
     while True:
