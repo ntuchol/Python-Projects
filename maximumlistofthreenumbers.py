@@ -15,8 +15,7 @@ def find_max_three(numbers):
     
     return [max1, max2, max3]
 
-#Example usage
 numbers_list = [10, 5, 8, 20, 15]
 max_three = find_max_three(numbers_list)
 
-print(f"The three largest numbers are: {max_three}") # Output: [20, 15, 10]
+print(f"The three largest numbers are: {max_three}") 
