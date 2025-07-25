@@ -7,7 +7,6 @@ url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}
 response = requests.get(url)
 weather_data = response.json()
 
-# Process and extract desired weather observations from weather_data
 print(f"Current temperature in {city}: {weather_data['main']['temp']} K")
 from pyowm import OWM
 
