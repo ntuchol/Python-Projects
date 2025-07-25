@@ -6,4 +6,4 @@ def euclidean_distance(point1, point2):
 
 point1 = (1, 2)
 point2 = (4, 6)
-print(euclidean_distance(point1, point2)) # Output: 5.0
+print(euclidean_distance(point1, point2))
