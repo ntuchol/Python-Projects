@@ -7,11 +7,11 @@ X, y = make_regression(n_samples=100, n_features=10, random_state=42)
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 elastic_net_cv = ElasticNetCV(
-    l1_ratio=[.1, .5, .7, .9, .95, .99, 1],  # Example l1_ratio values to search
-    alphas=np.logspace(-4, 0, 10),         # Example alpha values to search (10 values from 10^-4 to 10^0)
-    cv=5,                                  # 5-fold cross-validation
+    l1_ratio=[.1, .5, .7, .9, .95, .99, 1], 
+    alphas=np.logspace(-4, 0, 10),         
+    cv=5,                                  
     random_state=42,
-    n_jobs=-1                              # Use all available CPU cores for parallel processing
+    n_jobs=-1                            
 )
 
 elastic_net_cv.fit(X_train, y_train)
