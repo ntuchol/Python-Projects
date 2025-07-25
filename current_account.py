@@ -33,7 +33,6 @@ class BankAccount:
     def __str__(self):
         return f"Account Number: {self.account_number}, Account Holder Name: {self.name}, Balance: {self.balance}"
 
-# Example usage
 account1 = BankAccount("Alice", 1000)
 print(account1)
 account1.deposit(500)
