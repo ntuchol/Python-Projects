@@ -7,4 +7,4 @@ a = Decimal('1.1')
 b = Decimal('2.2')
 
 result = a + b
-print(result) # Output: 3.3
+print(result) 
