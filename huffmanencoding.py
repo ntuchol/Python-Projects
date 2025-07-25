@@ -63,7 +63,6 @@ def huffman_encoding(text):
     encoded_text = "".join(codes[char] for char in text)
     return encoded_text, codes
 
-# Example usage:
 text = "hello world"
 encoded_text, codes = huffman_encoding(text)
 
