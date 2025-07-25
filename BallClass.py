@@ -18,13 +18,11 @@ class Ball:
             self.y_speed *= -1
 
     def draw(self, canvas):
-       # Assumes 'canvas' is a drawing context (e.g., from Tkinter or Pygame)
         canvas.create_oval(self.x - self.radius, self.y - self.radius,
                              self.x + self.radius, self.y + self.radius,
                              fill=self.color)
 
 if __name__ == '__main__':
-    # Example Usage (using Tkinter for visualization)
     import tkinter as tk
     import time
 
@@ -41,7 +39,7 @@ if __name__ == '__main__':
         ball.bounce(width, height)
         canvas.delete("all")
         ball.draw(canvas)
-        window.after(20, update)  # Update every 20 milliseconds
+        window.after(20, update) 
 
     update()
     window.mainloop()
