@@ -2,16 +2,12 @@ import re
 from collections import Counter
 
 def find_most_frequent_bigrams(text, n=50):
-    # Tokenize the text into words, removing non-alphanumeric characters and converting to lowercase
     words = re.findall(r'\b\w+\b', text.lower())
     
-    # Generate bigrams
     bigrams = zip(words, words[1:])
     
-    # Count bigram frequencies
     bigram_counts = Counter(bigrams)
     
-    # Get the n most common bigrams
     most_common_bigrams = bigram_counts.most_common(n)
     
     return most_common_bigrams
