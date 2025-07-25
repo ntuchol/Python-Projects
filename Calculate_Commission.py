@@ -1,9 +1,8 @@
 def calculate_commission(car_type, sales_profit):
-    """Calculates the commission based on car type and sales profit."""
     if car_type == "new":
-        commission_rate = 0.035  # 3.5% for new cars
+        commission_rate = 0.035  
     elif car_type == "used":
-        commission_rate = 0.025  # 2.5% for used cars
+        commission_rate = 0.025  
     else:
         return "Invalid car type"
 
@@ -11,7 +10,6 @@ def calculate_commission(car_type, sales_profit):
     return commission
 
 def main():
-    """Gets input and displays the commission."""
     car_type = input("Enter car type (new/used): ").lower()
     try:
         sales_profit = float(input("Enter sales profit: "))
@@ -32,7 +30,6 @@ if __name__ == "__main__":
 import random
 
 def get_fortune():
-    """Returns a random fortune from a list."""
     fortunes = [
         "You will have a pleasant surprise soon.",
         "The early bird gets the worm, but the second mouse gets the cheese.",
@@ -48,7 +45,6 @@ def get_fortune():
     return random.choice(fortunes)
 
 def main():
-    """Simulates a fortune cookie interaction."""
     input("Press Enter to open your fortune cookie...")
     print("Your fortune:", get_fortune())
 
@@ -67,11 +63,9 @@ coin_flip(100)
 import random
 
 def deal_card(deck):
-    """Deals a single card from the deck."""
     return deck.pop()
 
 def calculate_hand_value(hand):
-    """Calculates the value of a hand in Blackjack."""
     ace_count = hand.count('A')
     total = 0
     for card in hand:
@@ -87,7 +81,6 @@ def calculate_hand_value(hand):
     return total
 
 def display_hands(player_hand, dealer_hand, hide_dealer=True):
-    """Displays the hands of the player and dealer."""
     print(f"Player's hand: {player_hand} ({calculate_hand_value(player_hand)})")
     if hide_dealer:
         print(f"Dealer's hand: [Hidden], {dealer_hand[1:]} ")
@@ -95,7 +88,6 @@ def display_hands(player_hand, dealer_hand, hide_dealer=True):
         print(f"Dealer's hand: {dealer_hand} ({calculate_hand_value(dealer_hand)})")
 
 def play_blackjack():
-    """Plays a simplified game of Blackjack."""
     deck = [str(i) for i in range(2, 11)] * 4 + ['J'] * 4 + ['Q'] * 4 + ['K'] * 4 + ['A'] * 4
     random.shuffle(deck)
     player_hand = [deal_card(deck), deal_card(deck)]
