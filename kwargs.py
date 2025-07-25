@@ -4,7 +4,6 @@
         header = kwargs.get('header', True)         
         separator = kwargs.get('sep', ',')          
 
-        # Example: using pandas to read a CSV
         import pandas as pd
         df = pd.read_csv(filepath, encoding=encoding, sep=separator, header=header)
         return df
