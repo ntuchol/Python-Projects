@@ -18,7 +18,6 @@ def list_directory_contents(directory_path):
     except Exception as e:
         print(f"An unexpected error occurred: {e}")
 
-# Example usage
 if __name__ == "__main__":
     directory = input("Enter the directory path to list: ")
     list_directory_contents(directory)
