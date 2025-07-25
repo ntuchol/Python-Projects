@@ -1,21 +1,16 @@
 import turtle
 
 def draw_squares():
-    # Set up the turtle
     screen = turtle.Screen()
     screen.bgcolor("white")
     pen = turtle.Turtle()
-    pen.speed(0)  # Set the speed to the fastest
+    pen.speed(0)  
 
-    # Draw 60 squares
     for i in range(60):
-        for _ in range(4):  # Draw a square
-            pen.forward(100)  # Length of each side
+        for _ in range(4):  
+            pen.forward(100) 
             pen.right(90)
-        pen.right(6)  # Rotate slightly for the next square
-
-    # Finish
+        pen.right(6)  
     turtle.done()
 
-# Run the function
 draw_squares()
