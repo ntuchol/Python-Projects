@@ -64,7 +64,6 @@ class AVLTree:
         elif key > node.key:
             node.right = self._insert(node.right, key, value)
         else:
-            # Key already exists, update the value (optional)
             node.value = value
             return node
 
@@ -72,20 +71,16 @@ class AVLTree:
 
         balance_factor = self.get_balance_factor(node)
 
-        # Left-Left case
         if balance_factor > 1 and key < node.left.key:
             return self.right_rotate(node)
 
-        # Right-Right case
         if balance_factor < -1 and key > node.right.key:
             return self.left_rotate(node)
 
-        # Left-Right case
         if balance_factor > 1 and key > node.left.key:
             node.left = self.left_rotate(node.left)
             return self.right_rotate(node)
 
-        # Right-Left case
         if balance_factor < -1 and key < node.right.key:
             node.right = self.right_rotate(node.right)
             return self.left_rotate(node)
