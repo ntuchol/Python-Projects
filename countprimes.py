@@ -1,5 +1,4 @@
 def count_primes(n):
-    """Counts the number of prime numbers less than n."""
     if n <= 2:
         return 0
     
