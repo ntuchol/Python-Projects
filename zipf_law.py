@@ -21,8 +21,4 @@ def zipf_law(text):
     plt.show()
 
 text = """
-This is a sample text to demonstrate Zipf's Law. This text is used to show the distribution of words.
-The frequency of words is inversely proportional to their rank.
-"""
-
 zipf_law(text)
