@@ -1,24 +1,15 @@
-
-Natalia Tucholska <ntuchol@bu.edu>
-Wed, Apr 16, 1:06 AM (10 days ago)
-to me
-
 def sum_series(n):
     if n == 0:
         return 0
     else:
         return n + sum_series(n-1)
 def sum_powers_of_two(n):
-    """
-    Calculate the sum of the first n powers of 2 iteratively.
-    For example, if n is 3, it calculates 2^0 + 2^1 + 2^2.
-    """
+    
     total_sum = 0
     for i in range(n):
         total_sum += 2**i
     return total_sum
 
-# Example usage:
 n = 5
 result = sum_powers_of_two(n)
 print(f"The sum of the first {n} powers of 2 is: {result}")
@@ -35,36 +26,24 @@ def concat_recursive(list_of_strings):
         tail = list_of_strings[1:]
         return head + concat_recursive(tail)
 
-# Example usage
 strings = ["hello", " ", "world", "!"]
 result = concat_recursive(strings)
-print(result)  # Output: hello world!
+print(result)  
 
 def recursive_product(data):
-    """
-    Calculate the product of elements in a list recursively.
-
-    Args:
-        data: A list of numbers.
-
-    Returns:
-        The product of the elements in the list.
-        Returns 1 if the list is empty.
-    """
     if not data:
         return 1
     else:
         head, *tail = data
         return head * recursive_product(tail)
 
-# Example usage:
 numbers = [1, 2, 3, 4, 5]
 product = recursive_product(numbers)
-print(f"The product of {numbers} is: {product}") # Output: The product of [1, 2, 3, 4, 5] is: 120
+print(f"The product of {numbers} is: {product}") 
 
 empty_list = []
 product_empty = recursive_product(empty_list)
-print(f"The product of {empty_list} is: {product_empty}") # Output: The product of [] is: 1
+print(f"The product of {empty_list} is: {product_empty}")
 
 
 def count_rooms(grid):
@@ -76,8 +55,7 @@ def count_rooms(grid):
     def flood_fill(row, col):
         if row < 0 or row >= rows or col < 0 or col >= cols or grid[row][col] == '#':
             return
-        grid[row][col] = '#'  # Mark the current cell as visited
-        # Recursively explore adjacent cells
+        grid[row][col] = '#'  
         flood_fill(row + 1, col)
         flood_fill(row - 1, col)
         flood_fill(row, col + 1)
@@ -90,7 +68,6 @@ def count_rooms(grid):
                 flood_fill(r, c)
 
     return num_rooms
-# Example usage:
 grid = [
     ["#", "#", "#", "#", "#", "#"],
     ["#", ".", ".", ".", "#", "#"],
@@ -99,14 +76,13 @@ grid = [
     ["#", "#", "#", "#", "#", "#"],
 ]
 num_rooms = count_rooms(grid)
-print(f"Number of rooms: {num_rooms}")  # Output: 2
+print(f"Number of rooms: {num_rooms}")  
 def reverse_search(data, target):
     for i in reversed(range(len(data))):
         if data[i] == target:
             return i
     return -1
 
-# Example Usage
 my_list = [10, 20, 30, 40, 50]
 target_value = 30
 
