@@ -1,15 +1,7 @@
 def is_positive(num):
-  """Checks if a number is positive.
-
-  Args:
-    num: The number to check.
-
-  Returns:
-    True if the number is positive, False otherwise.
-  """
+  
   return num > 0
 
-# Example usage
 user_input = input("Enter a number: ")
 try:
   number = float(user_input)
