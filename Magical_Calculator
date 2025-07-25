@@ -13,7 +13,6 @@ def performMath():
       equation = input("Enter equation:")
    else: 
       equation = input(str(previous))
-3
    if equation == 'quit':
       print("Goodbye, human.")
       run = False
