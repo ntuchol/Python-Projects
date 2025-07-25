@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 def extract_text_from_url(url):
     try:
         response = requests.get(url)
-        response.raise_for_status()  # Raise an exception for bad status codes
+        response.raise_for_status()  
 
         soup = BeautifulSoup(response.content, 'html.parser')
         text = soup.get_text(separator='\n', strip=True)
@@ -14,7 +14,7 @@ def extract_text_from_url(url):
         return None
 
 if __name__ == '__main__':
-    url = "YOUR_FAVORITE_WORD_PAGE_URL"  # Replace with the actual URL
+    url = "YOUR_FAVORITE_WORD_PAGE_URL" 
     extracted_text = extract_text_from_url(url)
 
     if extracted_text:
