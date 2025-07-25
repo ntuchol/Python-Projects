@@ -1,7 +1,7 @@
 import math
 
 result = math.factorial(5)
-print(result)  # Output: 120
+print(result) 
 
 def factorial_iterative(n):
     fact = 1
@@ -10,7 +10,7 @@ def factorial_iterative(n):
     return fact
 
 result = factorial_iterative(5)
-print(result)  # Output: 120
+print(result)  
 
 def factorial_recursive(n):
     if n < 2:
@@ -19,4 +19,4 @@ def factorial_recursive(n):
         return n * factorial_recursive(n - 1)
 
 result = factorial_recursive(5)
-print(result) # Output: 120
+print(result) 
