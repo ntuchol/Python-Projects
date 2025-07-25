@@ -2,18 +2,14 @@
 import numpy as np
 from sklearn.linear_model import LinearRegression
 
-# Sample data (replace with your actual data)
 height = np.array([150, 160, 170, 180, 190]).reshape(-1, 1)  # Height in cm
 weight = np.array([50, 60, 70, 80, 90])  # Weight in kg
 
 
-# Create a linear regression model
 model = LinearRegression()
 
-# Train the model using height as input and weight as output
 model.fit(height, weight)
 
-# Predict weight for a new height
 new_height = np.array([175]).reshape(-1, 1)
 predicted_weight = model.predict(new_height)
 
@@ -25,7 +21,6 @@ print("Predicted weight for height", new_height[0][0], "cm:", predicted_weight[0
     
     app = Flask(__name__)
     
-    # Load the model
     with open('model.pkl', 'rb') as model_file:
         model = pickle.load(model_file)
     
