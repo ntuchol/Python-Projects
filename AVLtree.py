@@ -31,20 +31,17 @@ class AVLTree:
         root.height = 1 + max(self.height(root.left), self.height(root.right))
         balance = self.balance(root)
 
-        # Left rotation
+      
         if balance > 1 and value < root.left.value:
             return self.right_rotate(root)
 
-        # Right rotation
         if balance < -1 and value > root.right.value:
             return self.left_rotate(root)
 
-        # Left-Right rotation
         if balance > 1 and value > root.left.value:
             root.left = self.left_rotate(root.left)
             return self.right_rotate(root)
 
-        # Right-Left rotation
         if balance < -1 and value < root.right.value:
             root.right = self.right_rotate(root.right)
             return self.left_rotate(root)
@@ -79,20 +76,16 @@ class AVLTree:
         root.height = 1 + max(self.height(root.left), self.height(root.right))
         balance = self.balance(root)
 
-        # Left rotation
         if balance > 1 and self.balance(root.left) >= 0:
             return self.right_rotate(root)
 
-        # Right rotation
         if balance < -1 and self.balance(root.right) <= 0:
             return self.left_rotate(root)
 
-        # Left-Right rotation
         if balance > 1 and self.balance(root.left) < 0:
             root.left = self.left_rotate(root.left)
             return self.right_rotate(root)
 
-        # Right-Left rotation
         if balance < -1 and self.balance(root.right) > 0:
             root.right = self.right_rotate(root.right)
             return self.left_rotate(root)
@@ -146,7 +139,6 @@ class AVLTree:
         return self.search(self.root, value)
 
 
-# Example usage:
 if __name__ == "__main__":
     tree = AVLTree()
     tree.insert_value(10)
@@ -156,7 +148,6 @@ if __name__ == "__main__":
     tree.insert_value(50)
 
     print("Tree after insertion:")
-    # In-order traversal to print the tree
     def inorder_traversal(root):
         if root:
             inorder_traversal(root.left)
