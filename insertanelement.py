@@ -5,4 +5,3 @@ index_to_insert = 2
 my_list.insert(index_to_insert, element_to_insert)
 
 print(my_list)
-# Output: [1, 2, 3, 4, 5]
