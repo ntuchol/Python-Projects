@@ -1,9 +1,8 @@
-# Simplified example
 class BacktrackingShiftReduceParser:
     def __init__(self, grammar):
         self.grammar = grammar
-        self.agenda = [] # List of parser states
-        self.results = [] # List of successful parses
+        self.agenda = [] 
+        self.results = [] 
 
     def parse(self, tokens):
         self.agenda.append(ParserState(stack=[], buffer=tokens, history=[]))
@@ -20,13 +19,9 @@ class BacktrackingShiftReduceParser:
         return self.results
 
     def get_possible_actions(self, state):
-        # Logic to identify shift and reduce conflicts
-        # and return a list of possible actions (shift/reduce).
         return []
 
     def apply_action(self, state, action):
-        # Logic to apply an action (shift, reduce) to the current state
-        # and return a new parser state.
         return None
 
 class ParserState:
