@@ -1,14 +1,7 @@
 from bs4 import BeautifulSoup
 
 def parse_html_dictionary(html_content):
-    """Parses an HTML dictionary and returns a Python dictionary.
-
-    Args:
-        html_content: The HTML content as a string.
-
-    Returns:
-        A dictionary where keys are words and values are their definitions.
-    """
+    
     soup = BeautifulSoup(html_content, 'html.parser')
     dictionary = {}
     for p in soup.find_all('p'):
@@ -29,7 +22,6 @@ if __name__ == '__main__':
     dictionary = parse_html_dictionary(html_content)
     print(dictionary)
 
-    # Example usage:
     search_word = "Word2"
     if search_word in dictionary:
         print(f"The definition of '{search_word}' is: {dictionary[search_word]}")
