@@ -1,3 +1,5 @@
+import pandas as pd
+
     temperatures = [25, 28, 21, 30, 26]
     max_temperature = max(temperatures)
     print(max_temperature)  
@@ -16,7 +18,6 @@
     max_temp = df['temperature'].max()
     print(max_temp) # Output: 31
 
-import pandas as pd
     dates = pd.to_datetime(['2024-05-01 12:00:00', '2024-05-01 18:00:00', '2024-05-02 12:00:00'])
     temps = [20, 25, 30]
     df = pd.DataFrame({'TIMESTAMP': dates, 'temperature': temps})
