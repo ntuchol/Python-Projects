@@ -11,7 +11,6 @@ def doctor_bot():
             print("Dr. Bot: Take care! If symptoms persist, please consult a real doctor. Goodbye!")
             break
         
-        # Simple responses based on keywords
         if "fever" in user_input:
             print("Dr. Bot: It sounds like you might have a fever. Stay hydrated and rest. If it gets worse, see a doctor.")
         elif "headache" in user_input:
@@ -21,7 +20,6 @@ def doctor_bot():
         elif "stomach" in user_input:
             print("Dr. Bot: Stomach issues can be tricky. Avoid heavy meals and stay hydrated. If it persists, consult a doctor.")
         else:
-            # Random generic responses
             responses = [
                 "Dr. Bot: Hmm, that's interesting. Can you tell me more?",
                 "Dr. Bot: I'm not sure about that. You might want to consult a healthcare professional.",
@@ -29,6 +27,5 @@ def doctor_bot():
             ]
             print(random.choice(responses))
 
-# Run the chatbot
 if __name__ == "__main__":
     doctor_bot()
