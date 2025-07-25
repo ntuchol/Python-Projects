@@ -13,7 +13,6 @@ class BankAccount:
         else:
             return "Insufficient funds"
 
-#Example Usage
 account = BankAccount(100)
 print("Current balance:", account.balance)
 
