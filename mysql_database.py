@@ -30,4 +30,3 @@ if 'conn' in locals() and conn.is_connected():
     cursor.close()
     conn.close()
     print("Connection closed.")
-Important Considera
