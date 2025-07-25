@@ -17,18 +17,14 @@ def calculate_hand_value(hand):
         num_aces -= 1
     return value
 
-# ... (deck creation, shuffling, dealing functions)
 
-# Player's turn loop
 while player_total < 21:
     action = input("Do you want to hit or stand? (H/S): ").upper()
     if action == 'H':
         player_hand.append(deck.pop())
         player_total = calculate_hand_value(player_hand)
-        # ... (display hand)
     elif action == 'S':
         break
     else:
         print("Invalid input. Please enter 'H' or 'S'.")
 
-# ... (dealer's turn, win/loss determination)
