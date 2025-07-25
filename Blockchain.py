@@ -9,23 +9,19 @@ class Block(object):
         self.data = data
         self.timestamp = timestamp or time.time()
     @property
-    #initial structure of the block class
     def compute_hash(self):
         string_block = "{}{}{}{}{}".format(self.index, self.proof_number, self.previous_hash, self.data, self.timestamp)
         return hashlib.sha256(string_block.encode()).hexdigest()
     def __repr__(self):
         return "{} - {} - {} - {} - {}".format(self.index, self.proof_number, self.previous_hash, self.data, self.timestamp)
-#producing the cryptographic hash of each block 
 class BlockChain(object):
     def __init__(self):
         self.chain = []
         self.current_data = []
         self.nodes = set()
         self.build_genesis()
-    #building the chain 
     def build_genesis(self):
         self.build_block(proof_number=0, previous_hash=0)
-    #creating the initial block
     def build_block(self, proof_number, previous_hash):
         block = Block(
             index=len(self.chain),
@@ -35,9 +31,7 @@ class BlockChain(object):
         )
         self.current_data = []  
         self.chain.append(block)
-        return block
-    #checks whether the blockchain is valid 
-    #declares data of transactions 
+        return block 
     @staticmethod
     def confirm_validity(block, previous_block):
         if previous_block.index + 1 != block.index:
@@ -57,7 +51,6 @@ class BlockChain(object):
     @staticmethod
     def proof_of_work(last_proof):
         pass
-    #adds to the security of the blockchain
     @property
     def latest_block(self):
         return self.chain[-1]
@@ -87,7 +80,6 @@ class BlockChain(object):
             block_data['data'],
             timestamp=block_data['timestamp']
         )
-    #returns the last block in the chain 
 blockchain = BlockChain()
 print("GET READY MINING ABOUT TO START")
 print(blockchain.chain)
