@@ -4,8 +4,8 @@ import numpy as np
     from sklearn.datasets import load_digits
     from sklearn.svm import SVC
     
-X, y = load_digits(return_X_y=True) # Example using a built-in dataset
-estimator = SVC(gamma=0.001) # Example using a Support Vector Classifier
+X, y = load_digits(return_X_y=True) 
+estimator = SVC(gamma=0.001) 
 
  train_sizes, train_scores, test_scores = learning_curve(
         estimator, X, y, cv=5, n_jobs=-1, train_sizes=np.linspace(0.1, 1.0, 10)
