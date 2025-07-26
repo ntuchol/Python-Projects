@@ -1,7 +1,3 @@
-# Python3 program to convert
-# integer value to roman values
- 
-# Function to convert integer to Roman values
 def printRoman(number):
     num = [1, 4, 5, 9, 10, 40, 50, 90,
         100, 400, 500, 900, 1000]
@@ -18,7 +14,6 @@ def printRoman(number):
             div -= 1
         i -= 1
  
-# Driver code
 if __name__ == "__main__":
     number = 3549
     print("Roman value is:", end = " ")
