@@ -4,7 +4,6 @@ from sklearn.metrics import silhouette_score
 from sklearn.datasets import make_blobs
 import matplotlib.pyplot as plt
 
-# Generate sample data
 X, _ = make_blobs(n_samples=300, centers=4, random_state=42)
 
 silhouette_scores = []
@@ -16,7 +15,6 @@ for k in k_range:
     score = silhouette_score(X, kmeans.labels_)
     silhouette_scores.append(score)
 
-# Plotting the silhouette scores
 plt.plot(k_range, silhouette_scores, marker='o')
 plt.xlabel("Number of Clusters (k)")
 plt.ylabel("Silhouette Score")
