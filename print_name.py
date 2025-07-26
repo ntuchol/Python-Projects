@@ -1,10 +1,8 @@
 def print_name(name):
-  """Prints the given name."""
   print(name)
 
-# Example usage:
-print_name("World") # Output: World
-print_name("Python") # Output: Python
+print_name("World") 
+print_name("Python") 
 
 def check_case(text):
     if text.isupper():
@@ -14,7 +12,6 @@ def check_case(text):
     else:
         print("The string is mixed case or contains non-alphabetic characters.")
 
-# Example usage:
 check_case("HELLO")
 check_case("world")
 check_case("MixEdCase")
@@ -33,7 +30,6 @@ import click
     @click.option('--name', default='World', help='The person to greet.')
     @click.option('--times', default=1, help='Number of greetings.')
     def greet(name, times):
-        """A simple program that greets someone."""
         for _ in range(times):
             click.echo(f"Hello, {name}!")
     
@@ -44,11 +40,9 @@ import click
     
     class MyClass:
         def method1(self, arg1, arg2):
-            """Method 1 does something."""
             return f"Method 1 called with {arg1} and {arg2}"
     
         def method2(self):
-             """Method 2 does something else."""
              return "Method 2 called"
     
     if __name__ == '__main__':
@@ -57,10 +51,7 @@ import click
 names = ['smogtether', 'two']
 print([n[0].upper() for n in names])
 def alternate_even_odd(start=0):
-    """
-    Generates an infinite sequence of alternating even and odd numbers,
-    starting from the given number.
-    """
+    
     num = start
     while True:
         yield num
