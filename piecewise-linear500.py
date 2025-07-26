@@ -23,7 +23,6 @@ plt.ylabel('y')
 plt.title('Piecewise Linear Fit')
 plt.show()
 
-# Print the slopes and intercepts of each segment
 slopes = my_pwlf.slopes
 intercepts = my_pwlf.intercepts
 for i in range(len(slopes)):
