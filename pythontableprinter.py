@@ -3,22 +3,17 @@ def print_table(data):
         print("No data to display.")
         return
 
-    # Extract headers
     headers = data[0].keys()
-    # Calculate column widths
     col_widths = {header: max(len(header), max(len(str(row[header])) for row in data)) for header in headers}
 
-    # Print header row
     header_row = " | ".join(f"{header:{col_widths[header]}}" for header in headers)
     print(header_row)
     print("-" * len(header_row))
 
-    # Print data rows
     for row in data:
         data_row = " | ".join(f"{str(row[header]):{col_widths[header]}}" for header in headers)
         print(data_row)
 
-# Example usage
 data = [
     {"Name": "Alice", "Age": 30, "City": "New York"},
     {"Name": "Bob", "Age": 24, "City": "Los Angeles"},
