@@ -1,7 +1,6 @@
 import random
 
 def number_guessing_game():
-    """Plays a number guessing game with the user."""
 
     lower_bound = 1
     upper_bound = 100
