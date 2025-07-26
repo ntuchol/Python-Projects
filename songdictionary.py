@@ -1,4 +1,3 @@
-# Dictionary of songs mapped to ratings
 songs = {
     "Shape of You": 4.5,
     "Blinding Lights": 4.8,
@@ -7,7 +6,6 @@ songs = {
 }
 
 def display_songs():
-    """Display all songs and their ratings."""
     if not songs:
         print("No songs in the collection.")
     else:
@@ -16,7 +14,6 @@ def display_songs():
             print(f"{song}: {rating}/5")
 
 def add_song(song_name, rating):
-    """Add a new song with its rating."""
     if song_name in songs:
         print(f"'{song_name}' already exists in the collection.")
     else:
@@ -24,7 +21,6 @@ def add_song(song_name, rating):
         print(f"Added '{song_name}' with a rating of {rating}/5.")
 
 def update_rating(song_name, new_rating):
-    """Update the rating of an existing song."""
     if song_name in songs:
         songs[song_name] = new_rating
         print(f"Updated '{song_name}' to a new rating of {new_rating}/5.")
@@ -32,14 +28,12 @@ def update_rating(song_name, new_rating):
         print(f"'{song_name}' not found in the collection.")
 
 def delete_song(song_name):
-    """Delete a song from the collection."""
     if song_name in songs:
         del songs[song_name]
         print(f"Deleted '{song_name}' from the collection.")
     else:
         print(f"'{song_name}' not found in the collection.")
 
-# Example usage
 while True:
     print("\nMenu:")
     print("1. Display Songs")
