@@ -9,7 +9,7 @@ class LinkedList:
 
     def insert_before(self, target_node, new_data):
         if self.head is None:
-            return  # Empty list, nothing to insert before
+            return  
 
         if self.head == target_node:
             new_node = Node(new_data)
