@@ -1,7 +1,5 @@
-# import pandas
 import pandas as pd
 
-# lists of state names and populations
 state_list = ['California', 'Texas', 'Florida', 'New York', 'Illinois',
               'Pennsylvania', 'Ohio', 'Georgia', 'North Carolina', 'Michigan',
               'New Jersey', 'Virginia', 'Washington', 'Arizona', 'Massachusetts',
@@ -23,7 +21,6 @@ population_list = [39512223, 28995881, 21477737, 19453561, 12671821, 12801989,
                    1068778, 1059361, 973764, 884659, 762062, 731545, 705749,
                    623989, 578759,]
 
-# create a series from a list of values and a list of labels
 state_series = pd.Series(data=population_list,
                          index=state_list,
                          dtype='int64')
