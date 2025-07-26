@@ -11,7 +11,6 @@ def print_primes_in_range(start, end):
         if is_prime(number):
             print(number)
 
-# Example usage:
 start_range = 1
 end_range = 50
 print(f"Prime numbers between {start_range} and {end_range}:")
