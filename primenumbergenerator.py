@@ -1,13 +1,5 @@
 def prime_generator(limit):
-    """
-    Generates prime numbers up to a specified limit.
-
-    Args:
-        limit: The upper limit for generating prime numbers.
-
-    Yields:
-        Prime numbers less than or equal to the limit.
-    """
+    
     if limit <= 1:
         return
     
@@ -23,6 +15,5 @@ def prime_generator(limit):
         if primes[i]:
             yield i
 
-# Example usage:
 for prime in prime_generator(50):
     print(prime)
