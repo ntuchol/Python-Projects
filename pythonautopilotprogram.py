@@ -2,37 +2,30 @@ import pygame
 import random
 import sys
 
-# Initialize Pygame
 pygame.init()
 
-# Screen dimensions
 WIDTH, HEIGHT = 800, 600
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Simple FPS Game")
 
-# Colors
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 RED = (255, 0, 0)
 GREEN = (0, 255, 0)
 
-# Clock for controlling frame rate
 clock = pygame.time.Clock()
 
-# Player settings
 player_pos = [WIDTH // 2, HEIGHT - 50]
 player_size = 50
 player_speed = 5
 
-# Bullet settings
 bullets = []
 bullet_speed = -7
 bullet_size = 10
 
-# Target settings
 targets = []
 target_size = 50
-target_spawn_time = 2000  # Spawn every 2 seconds
+target_spawn_time = 2000  
 last_spawn_time = pygame.time.get_ticks()
 
 # Score
