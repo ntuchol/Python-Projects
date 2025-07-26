@@ -6,7 +6,6 @@ def stem_tokens(tokens):
     stemmed_tokens = [stemmer.stem(token) for token in tokens]
     return stemmed_tokens
 
-# Example usage
 text = "The cats are running quickly. They were running faster than the dogs."
 tokens = word_tokenize(text)
 stemmed_text = stem_tokens(tokens)
