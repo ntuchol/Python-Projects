@@ -1,5 +1,5 @@
 import yfinance as yf
-from rx import Observable # Assuming the ReactiveX library is installed as 'rx' based on a potential source.
+from rx import Observable 
 from rx.subject import Subject
 
 def fetch_stock_data(ticker, start_date, end_date):
@@ -11,7 +11,7 @@ def fetch_stock_data(ticker, start_date, end_date):
         return None
 
 def create_stock_observable(stock_data):
-    source = Observable.from_(stock_data.iterrows())  # Use from_ to iterate over DataFrame rows
+    source = Observable.from_(stock_data.iterrows())  
     return source
 
 if __name__ == "__main__":
