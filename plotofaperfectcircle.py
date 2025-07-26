@@ -1,16 +1,14 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-# Define the circle parameters
 radius = 1
-theta = np.linspace(0, 2 * np.pi, 100)  # Angle values from 0 to 2π
-x = radius * np.cos(theta)  # X-coordinates
-y = radius * np.sin(theta)  # Y-coordinates
+theta = np.linspace(0, 2 * np.pi, 100)  
+x = radius * np.cos(theta)  
+y = radius * np.sin(theta) 
 
-# Plot the circle
-plt.figure(figsize=(6, 6))  # Ensure the plot is square
+plt.figure(figsize=(6, 6)) 
 plt.plot(x, y, label="Circle")
-plt.gca().set_aspect('equal', adjustable='box')  # Equal aspect ratio
+plt.gca().set_aspect('equal', adjustable='box')  
 plt.title("Perfect Circle")
 plt.xlabel("X-axis")
 plt.ylabel("Y-axis")
