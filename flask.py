@@ -15,7 +15,6 @@ from flask import Flask, render_template, request, redirect, url_for
     @app.route('/submit', methods=['POST'])
     def submit():
         if request.method == 'POST':
-            # Process form data here
             return redirect(url_for('success'))
         return render_template('index.html')
     
@@ -48,21 +47,16 @@ def test_user_exists(host):
     assert user.group == "mygroup"
     assert user.home == "/home/myuser"
 
-# Set the container name or ID
 container_name_or_id="my_container"
 
-# Check if the container is running
 if ! docker ps --quiet --filter "name=$container_name_or_id" ; then
   echo "Container '$container_name_or_id' is not running."
   exit 1
 fi
 
-# Command to execute inside the container
 command_to_execute="ls -l /"
 
-# Execute the command inside the container
 echo "Executing command: docker exec $container_name_or_id $command_to_execute"
 docker exec $container_name_or_id $command_to_execute
 
-# Exit the script
 exit 0
