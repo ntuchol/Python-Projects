@@ -1,8 +1,3 @@
-Here’s a Python program that allows you to store, view, and manage names, phone numbers, and emails in a phone book. It uses a dictionary to store the data and provides a simple menu for interaction.
-
-Copy the code
-# Phone Book Program
-
 def display_menu():
     print("\nPhone Book Menu:")
     print("1. Add Contact")
@@ -63,12 +58,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-Features:
-Add Contact: Allows you to add a new contact with a name, phone number, and email.
-View Contacts: Displays all stored contacts.
-Search Contact: Searches for a contact by name.
-Delete Contact: Deletes a contact by name.
-Exit: Exits the program.
-
-This program is simple and can be extended further, such as saving the phone book to a file or adding more fields.
