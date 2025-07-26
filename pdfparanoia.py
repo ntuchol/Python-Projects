@@ -8,7 +8,7 @@ if reader.is_encrypted:
 else:
     print("The PDF is safe to process.")
     
-import fitz  # PyMuPDF
+import fitz  
 
 file_path = "example.pdf"
 doc = fitz.open(file_path)
@@ -16,7 +16,7 @@ doc = fitz.open(file_path)
 for page in doc:
     areas = page.search_for("Sensitive Info")
     for area in areas:
-        page.add_redact_annot(area, fill=(0, 0, 0))  # Black out the text
+        page.add_redact_annot(area, fill=(0, 0, 0))  
         page.apply_redactions()
 
 doc.save("redacted_example.pdf")
