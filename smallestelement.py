@@ -1,13 +1,4 @@
 def find_smallest(numbers):
-    """
-    Finds the smallest element in a list of numbers.
-
-    Args:
-      numbers: A list of numbers.
-
-    Returns:
-      The smallest number in the list, or None if the list is empty.
-    """
     if not numbers:
         return None
     smallest = numbers[0]
