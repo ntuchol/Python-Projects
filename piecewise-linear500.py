@@ -2,23 +2,17 @@ import numpy as np
 import matplotlib.pyplot as plt
 from pwlf import PiecewiseLinFit
 
-# Generate sample data
 x = np.linspace(0, 10, 500)
 y = np.sin(x) + np.random.randn(500) * 0.2
 
-# Initialize piecewise linear fit with 3 segments
 my_pwlf = PiecewiseLinFit(x, y)
 
-# Fit the data
 res = my_pwlf.fitfast(3)
 
-# Get the x values of the line segments
 x_c = my_pwlf.fit_breaks
 
-# Predict y values
 y_hat = my_pwlf.predict(x)
 
-# Plot the results
 plt.figure(figsize=(10, 6))
 plt.plot(x, y, 'o', label='Data')
 plt.plot(x, y_hat, '-', label='Piecewise Linear Fit')
