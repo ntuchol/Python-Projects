@@ -7,7 +7,6 @@ def sequential_sort(arr):
                 min_index = j
         arr[i], arr[min_index] = arr[min_index], arr[i]
     return arr
-
 numbers = [64, 34, 25, 12, 22, 11, 90]
 sorted_numbers = sequential_sort(numbers)
 print("Sorted list:", sorted_numbers)
