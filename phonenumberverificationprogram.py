@@ -3,12 +3,9 @@ from phonenumbers import carrier, geocoder, NumberParseException
 
 def verify_phone_number(phone_number, region="US"):
     try:
-        # Parse the phone number
         parsed_number = phonenumbers.parse(phone_number, region)
         
-        # Check if the number is valid
         if phonenumbers.is_valid_number(parsed_number):
-            # Get carrier and location information
             carrier_name = carrier.name_for_number(parsed_number, "en")
             location = geocoder.description_for_number(parsed_number, "en")
             
@@ -23,7 +20,6 @@ def verify_phone_number(phone_number, region="US"):
     except NumberParseException as e:
         return {"valid": False, "error": str(e)}
 
-# Example usage
 if __name__ == "__main__":
     phone_number = input("Enter a phone number (e.g., +1234567890): ")
     result = verify_phone_number(phone_number)
