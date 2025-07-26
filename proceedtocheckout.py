@@ -24,7 +24,7 @@ class ShoppingCart:
             print("Proceeding to checkout...")
             print(f"Your total is ${self.total:.2f}. Thank you for shopping with us!")
 
-# Example usage
+
 cart = ShoppingCart()
 cart.add_item("Laptop", 999.99)
 cart.add_item("Headphones", 49.99)
