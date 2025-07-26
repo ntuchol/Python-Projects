@@ -6,7 +6,6 @@ def count_digits_recursive(input_string):
     else:
          return count_digits_recursive(input_string[1:])
 
-# Example Usage
 string_example = "abc123def45"
 digit_count = count_digits_recursive(string_example)
-print(f"The number of digits in the string is: {digit_count}") # Output: The number of digits in the string is: 5
+print(f"The number of digits in the string is: {digit_count}") 
