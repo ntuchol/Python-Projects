@@ -1,9 +1,8 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-# Example: Generate some random data
-data = np.random.randn(1000) # 1000 random numbers from a standard normal distribution
-plt.hist(data, bins=30) # Plot with 30 bins
+data = np.random.randn(1000) 
+plt.hist(data, bins=30) 
 
 plt.xlabel('Value')
 plt.ylabel('Frequency')
