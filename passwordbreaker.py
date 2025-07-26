@@ -1,5 +1,4 @@
 import PyPDF2
-
 pdfFile = open('reverse.pdf', 'rb')
 pdfReader = PyPDF2.PdfFileReader(pdfFile)
 pdfWriter = PyPDF2.PdfFileWriter()
