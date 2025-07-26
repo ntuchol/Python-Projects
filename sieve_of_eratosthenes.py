@@ -9,7 +9,6 @@ primes[i] = False
 p += 1
 return [i for i, prime in enumerate(primes) if prime]
 
-# Driver code
 if __name__ == "__main__":
 num = 30
 print(f"Prime numbers up to {num}: {sieve_of_eratosthenes(num)}")
